@@ -22,8 +22,7 @@ The player aims a penalty kick using onboard buttons, adjusts power using an osc
 - Power supply  
 
 ### System Diagram  
-*(Add diagram here)*  
-“High‑level system diagram showing VGA renderer, game logic FSM, input controller, and 7‑segment driver.”
+![High-level system diagram showing VGA renderer, game logic FSM, input controller, and 7-segment driver](block.png)
 
 ---
 
@@ -90,7 +89,7 @@ We added and modified:
 - **Oscillating power meter** with variable speed  
 - **Crosshair aiming system**  
 - **60‑second timer + high‑score memory**  
-- **Custom comic‑style text renderer ("GOAL!"/"MISS!")**  
+- **Custom text renderer ("GOAL!"/"MISS!")**  
 - **7‑segment decoder + multiplexing driver**  
 - **VGA renderer with field, goal, ball, and UI graphics**
 
@@ -121,8 +120,4 @@ We added and modified:
 - **Power meter too slow** → added speed constant  
 - **Repeat goalie dives** → enforced no‑repeat logic  
 
----
-
-## 7. Source Code
-Add all `.vhd` files in a `/src` folder:
 
