@@ -63,8 +63,6 @@ The player aims a penalty kick using onboard buttons, adjusts power using an osc
 - Added 7‑segment output ports  
 - Updated `.xdc` constraints to include all above
 
-*(Add image of your constraint file snippet here)*
-
 ---
 
 ## 4. Images / Videos of Project Running
