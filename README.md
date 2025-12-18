@@ -20,7 +20,6 @@ The player aims a penalty kick using onboard buttons, adjusts power using an osc
 - Nexys A7 board  
 - VGA cable  
 - Power supply  
-- (Optional) Speaker module if audio is later added
 
 ### System Diagram  
 *(Add diagram here)*  
