@@ -66,34 +66,35 @@ The player aims a penalty kick using onboard buttons, adjusts power using an osc
 ---
 
 ## 4. Images / Videos of Project Running
-*(Add photos of gameplay here)*  
-*(Add video link if you have one)*
+![goal](goal.png)
+![miss](miss.png)
+[gameplay demo (Google Drive)](https://drive.google.com/file/d/11C3PiTIgpmEcDeDKwcHJblMV90sYGgqK/view?usp=drive_link)
 
 ---
 
-## 5. Modifications Made (15 Points Section)
+## 5. Modifications Made (15 Points)
 
-Our project began from:
-- A basic **VGA timing generator** (`vga_sync.vhd`)  
-- A basic **blank top‑module template**
+Our project was built using a minimal baseline consisting of:
+- A standard **VGA timing generator** (`vga_sync.vhd`)
+- A **blank top-level module template** with no game logic or rendering
 
-We added and modified:
+Starting from this baseline, we significantly expanded the design into a complete, interactive hardware game.
 
-### **Added Features**
-- Full **penalty kick game engine**
-- **Pseudo‑random goalie behavior** using 8‑bit LFSR  
-- **Three‑state goalie dives** (L / C / R) with no repeats  
-- **Full collision detection** (circle‑vs‑rectangle)  
-- **Oscillating power meter** with variable speed  
-- **Crosshair aiming system**  
-- **60‑second timer + high‑score memory**  
-- **Custom text renderer ("GOAL!"/"MISS!")**  
-- **7‑segment decoder + multiplexing driver**  
-- **VGA renderer with field, goal, ball, and UI graphics**
+### Major Additions and Modifications
+- Designed and implemented a full **penalty kick game engine** using a frame-based FSM (AIM → SHOT → RESULT → GAMEOVER)
+- Integrated **pseudo-random goalie behavior** using an 8-bit LFSR, including logic to prevent repeated dive directions
+- Implemented **goalie dive motion** with bounded movement and target positions (left, center, right)
+- Added **collision detection** between the ball and goalie using circle-vs-rectangle geometry
+- Designed an **oscillating power meter** that determines shot velocity
+- Added a **crosshair-based aiming system** controlled by pushbuttons
+- Implemented a **60-second game timer** with persistent **high-score tracking**
+- Created a **custom VGA text rendering system** for “GOAL!” and “MISS!” messages using a hardcoded font
+- Designed a **7-segment display driver** with digit multiplexing and decoding
+- Built a full **VGA renderer** to draw the field, goal, goalie, ball, UI elements, and text in real time
 
-### **Starter Code Used**
-- `vga_sync.vhd` (Digilent standard VGA timing module)  
-- Everything else written or rewritten by the group.
+### Starter Code Used
+- `vga_sync.vhd` — standard Digilent VGA timing module  
+- All other game logic, rendering, control, and display functionality was written or substantially rewritten by the project team.
 
 ---
 
