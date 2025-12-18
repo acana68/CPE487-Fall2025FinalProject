@@ -55,7 +55,7 @@ The player aims a penalty kick using onboard buttons, adjusts power using an osc
 |--------|----------|
 | **VGA (R,G,B,HS,VS)** | Full graphics output |
 | **7‑segment display** | Shows current score or high score |
-| **LEDs (optional)** | Can be used for debugging |
+
 
 ### Added / Modified Ports (Required by Assignment)
 - Added button inputs for aim & shooting  
